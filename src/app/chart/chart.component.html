@@ -1,0 +1,122 @@
+<section class="section2">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-9">
+              <p class="titre">Financial Analysis</p>
+          </div>
+          <div class="col d-grid gap-2 d-md-flex justify-content-md-end">
+              <a class="btn btn-success" href="">See Details</a>
+          </div>
+      </div>
+      <div class="row cblock mt-3">
+          <div class="col-lg">
+              <div class="row">
+                  <div class="col-6">
+                      <p class="titre">Total Asset</p>
+                  </div>
+                  <div class="col  d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button class="btn btn-success" (click)="updateOptions( 'day' )">Today</button>
+                      <div class="weekbtn">
+                          <button class="btn" (click)="updateOptions( '6w' )">6Weeks</button>
+                      </div>
+                      <div class="yearbtn">
+                          <button class="btn" (click)="updateOptions( '1y' )">1year</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="courbe">
+                <apx-chart
+                #chart
+                [series]="chartOptions.series"
+                [chart]="chartOptions.chart"
+                [colors]="chartOptions.colors"
+                [yaxis]="chartOptions.yaxis"
+                [dataLabels]="chartOptions.dataLabels"
+                [markers]="chartOptions.markers"
+                [stroke]="chartOptions.stroke"
+                [xaxis]="chartOptions.xaxis"
+                [tooltip]="chartOptions.tooltip"
+                [annotations]="chartOptions.annotations"
+                [grid]="chartOptions.grid">
+                </apx-chart>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="row">
+                  <div class="col-6">
+                      <p class="titre">Total Earned</p>
+                  </div>
+                  <div class="col  d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-success" (click)="updateOptions1( 'day1' )">Today</button>
+                    <div class="weekbtn">
+                          <button class="btn" (click)="updateOptions1( '6w1' )">6Weeks</button>
+                      </div>
+                      <div class="yearbtn">
+                          <button class="btn" (click)="updateOptions1( '1y1' )" >1year</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="courbe">
+                <apx-chart
+                #chart1
+                [series]="chartOptions.series"
+                [chart]="chartOptions.chart"
+                [colors]="chartOptions.colors"
+                [yaxis]="chartOptions.yaxis"
+                [dataLabels]="chartOptions.dataLabels"
+                [markers]="chartOptions.markers"
+                [stroke]="chartOptions.stroke"
+                [xaxis]="chartOptions.xaxis"
+                [tooltip]="chartOptions.tooltip"
+                [annotations]="chartOptions.annotations"
+                [grid]="chartOptions.grid">
+                </apx-chart>
+               </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- <button
+  (click)="updateOptions( '1m' )"
+  [class.active]="activeOptionButton=='1m'"
+>
+  1M
+</button>
+<button
+  (click)="updateOptions( '6m' )"
+  [class.active]="activeOptionButton=='6m'"
+>
+  6M
+</button>
+<button
+  (click)="updateOptions( '1y' )"
+  [class.active]="activeOptionButton=='1y'"
+>
+  1Y
+</button>
+<button
+  (click)="updateOptions( '1yd' )"
+  [class.active]="activeOptionButton=='1yd'"
+>
+  1YD
+</button>
+<button
+  (click)="updateOptions( 'all' )"
+  [class.active]="activeOptionButton=='all'"
+>
+  All
+</button>
+<apx-chart
+  #chart
+  [series]="chartOptions.series"
+  [chart]="chartOptions.chart"
+  [colors]="chartOptions.colors"
+  [yaxis]="chartOptions.yaxis"
+  [dataLabels]="chartOptions.dataLabels"
+  [markers]="chartOptions.markers"
+  [stroke]="chartOptions.stroke"
+  [xaxis]="chartOptions.xaxis"
+  [tooltip]="chartOptions.tooltip"
+  [annotations]="chartOptions.annotations"
+></apx-chart> -->

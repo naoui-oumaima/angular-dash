@@ -1,0 +1,45 @@
+.section1{
+	margin-top: 40px;
+	padding: 0px 20px;
+	width: 100%;
+}
+
+
+.dep{
+    border: 1px solid var(--color1) ;
+    border-radius: 5%;
+        .btn {
+            color: var(--color1) ;
+        &:hover{
+            color: var(--color1) ;
+        }
+    }
+    &:hover{
+        background-color: var(--color);
+    }
+}
+
+.price{
+	font-family: 'poppins';
+	font-weight:700;
+	color:var(--color1);
+}
+
+.infop{
+	font-family: 'raleway';
+	font-weight: 600;
+}
+
+.moins{
+	color:#e0732b;
+	padding-top:20px ;
+	font-family: 'poppins';
+	font-weight:500;
+}
+
+.plus{
+	color:#619468;
+	padding-top:20px ;
+	font-family: 'poppins';
+	font-weight:500;
+}

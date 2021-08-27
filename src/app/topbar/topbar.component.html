@@ -1,0 +1,150 @@
+<!--
+<mat-toolbar class="navbar py-0 navbar-expand-xl">
+  <mat-toolbar-row>
+    <img src="../../assets/img/logo.png" class="dark logo"alt='logo'[style.display]="dark" />
+    <img src="../../assets/img/tlogo.png" class="light logo" alt='logo'[style.display]="light"/>
+    <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarSupportedContent" class="navbar-collapse">
+      <ul class="ul1">
+        <li class="nav-item mt-4">
+          <a class="nav-link" aria-current="page" href="">
+            <img src="../../assets/img/asset.png" class="dark"[style.display]="dark">
+            <img src="../../assets/img/lasset.png" class="light"[style.display]="light">
+            MyAssets
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="">
+            <img src="../../assets/img/dollar.png" class="dark"[style.display]="dark">
+            <img src="../../assets/img/ldollar.png" class="light"[style.display]="light">
+            Deposit/Withdraw
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="" >
+            <img src="../../assets/img/support.png" class="dark"[style.display]="dark">
+            <img src="../../assets/img/lsupport.png" class="light"[style.display]="light">
+            Support
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">
+            <img src="../../assets/img/setting.png" class="dark"[style.display]="dark">
+            <img src="../../assets/img/lsetting.png" class="light"[style.display]="light">
+            AdminPage
+          </a>
+        </li>
+      </ul>
+      <ul class="ul2">
+        <li class="nav-item me-3 mt-4 changeTheme">
+          <img src="../../assets/img/sun.png" class="navimg dark"[style.display]="dark">
+          <img src="../../assets/img/moon.png" class="navimg light"[style.display]="light">
+        </li>
+        <li class="nav-item me-3 mt-2">
+          <img src="../../assets/img/language.png" class="navimg dark"[style.display]="dark">
+          <img src="../../assets/img/llanguage.png" class="navimg light"[style.display]="light">
+        </li>
+        <li class="nav-item me-5 mt-2">
+          <img src="../../assets/img/notif.png" class="navimg dark"[style.display]="dark">
+          <img src="../../assets/img/lnotif.png" class="navimg light"[style.display]="light">
+        </li>
+        <li class="nav-item me-3 liuser">
+          <div class="row" [matMenuTriggerFor]="aboveMenu">
+            <div class="col px-0">
+              <img src="../../assets/img/user1.png" class="rounded-circle z-depth-2 user-img" >
+            </div>
+            <div class="col">
+              John Doe
+              <p>Administrator</p>
+            </div>
+            <div class="col px-0 pt-2 dropdown-toggle"></div>
+          </div>
+          <mat-menu #aboveMenu="matMenu" yPosition="above">
+            <button mat-menu-item>Action</button>
+            <button mat-menu-item>Another action</button>
+            <hr class="dropdown-divider">
+            <button mat-menu-item>LogOut</button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar> -->
+
+<nav class="navbar py-0 navbar-expand-xl">
+  <div class="container-fluid">
+    <a class="navbar-brand logo" href="">
+      <img src="../../assets/img/logo.png" [style.display]="dark">
+      <img src="../../assets/img/tlogo.png" [style.display]="light">
+    </a>
+    <button class="navbar-toggler navbar-dark"  (click)="toggleNavbar()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <mat-icon> {{!navbarOpened ? 'menu' : 'close'}} </mat-icon>
+    </button>
+    <div id="navbarSupportedContent" class="navbar-collapse collapse" [ngbCollapse]="isCollapsed">
+      <ul class="navbar-nav me-auto mb-lg-0 ul1">
+        <li class="nav-item me-3">
+          <a class="nav-link" aria-current="page" href="">
+            <img src="../../assets/img/asset.png" [style.display]="dark" class="me-1">
+            <img src="../../assets/img/lasset.png" [style.display]="light" class="me-1">
+            MyAssets
+          </a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link" href="">
+            <img src="../../assets/img/dollar.png" [style.display]="dark" class="me-1">
+            <img src="../../assets/img/ldollar.png" [style.display]="light" class="me-1">
+            Deposit/Withdraw
+          </a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link" href="" >
+            <img src="../../assets/img/support.png" [style.display]="dark" class="me-1">
+            <img src="../../assets/img/lsupport.png" [style.display]="light" class="me-1">
+            Support
+          </a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link" href="">
+            <img src="../../assets/img/setting.png" [style.display]="dark" class="me-1">
+            <img src="../../assets/img/lsetting.png" [style.display]="light" class="me-1">
+            AdminPage
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav pt-2 mb-lg-0 d-flex ul2">
+        <li class="nav-item me-3 ">
+          <img src="../../assets/img/sun.png" class="navimg" (click)="lighttheme()" [style.display]="dark">
+          <img src="../../assets/img/moon.png" class="navimg " (click)="darktheme()"  [style.display]="light">
+        </li>
+        <li class="nav-item me-3">
+          <img src="../../assets/img/language.png" class="navimg" [style.display]="dark">
+          <img src="../../assets/img/llanguage.png" class="navimg " [style.display]="light">
+        </li>
+        <li class="nav-item me-5 ">
+          <img src="../../assets/img/notif.png" class="navimg" [style.display]="dark">
+          <img src="../../assets/img/lnotif.png" class="navimg" [style.display]="light">
+        </li>
+        <li class="nav-item me-3 liuser">
+          <div class="row" [matMenuTriggerFor]="aboveMenu">
+            <div class="col px-0">
+              <img src="../../assets/img/user1.png" class="rounded-circle z-depth-2 user-img" >
+            </div>
+            <div class="col">
+              John Doe
+              <p>Administrator</p>
+            </div>
+            <div class="col px-0 pt-2 dropdown-toggle"></div>
+          </div>
+          <mat-menu #aboveMenu="matMenu" yPosition="above">
+            <button mat-menu-item>Action</button>
+            <button mat-menu-item>Another action</button>
+            <hr class="dropdown-divider">
+            <button mat-menu-item>LogOut</button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

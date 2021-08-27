@@ -1,0 +1,131 @@
+<section class="section3">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-7">
+        <p class="titre" >Transaction Records</p>
+      </div>
+      <div class="col d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-success " type="button" (click) = affall() id='all'>All</button>
+        <div class="interestbtn">
+          <button class="btn" type="button" (click) = interestbtn()>Interest</button>
+        </div>
+        <div class="wdbtn">
+          <button class="btn" type="button" (click)=withdrawbtn()>Withdraw</button>
+        </div>
+        <div class="depositbtn">
+          <button class="btn" type="button" (click)=depositbtn()>Deposit</button>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive-lg">
+      <table class="table mt-4 table-hover">
+        <thead>
+          <tr>
+            <td>Date</td>
+            <td>Crypto</td>
+            <td>Amount</td>
+            <td>Types Of Transaction</td>
+            <td>Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="deposit" [style.display]="displayD">
+            <td><img src="../../assets/img/date.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+              <img src="../../assets/img/ldate.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+              2021-06-04</td>
+            <td><img src="../../assets/img/box1.png" class="me-2" alt=''/>USDT</td>
+            <td class="amount">+1.1000000</td>
+            <td>
+              <div class="depositbtn">
+                <button class="btn" type="button" >Deposit</button>
+              </div>
+            </td>
+            <td><img src="../../assets/img/checked.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+              <img src="../../assets/img/lchecked.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+              Completed</td>
+          </tr>
+          <tr class="withdraw" [style.display]="displayW">
+            <td>
+              <img src="../../assets/img/date.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+              <img src="../../assets/img/ldate.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+              2021-06-04</td>
+            <td><img src="../../assets/img/box1.png" class="me-2" alt=''/>USDT</td>
+            <td class="amount">+1.1000000</td>
+            <td>
+              <div class="wdbtn">
+                <button class="btn" type="button" >Withdraw</button>
+              </div>
+            </td>
+            <td><img src="../../assets/img/checked.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+                <img src="../../assets/img/lchecked.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+                Completed
+            </td>
+          </tr>
+          <tr className='interest' [style.display]="displayI">
+            <td><img src="../../assets/img/date.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+                <img src="../../assets/img/ldate.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+                2021-06-04</td>
+            <td><img src="../../assets/img/box1.png" class="me-2" alt=''/>USDT</td>
+            <td class="amount">+1.1000000</td>
+            <td>
+              <div class="interestbtn">
+                <button class="btn" type="button" >Interest</button>
+              </div>
+            </td>
+            <td><img src="../../assets/img/checked.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+                <img src="../../assets/img/lchecked.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+                Completed</td>
+          </tr>
+          <tr className="deposit" [style.display]="displayD">
+            <td><img src="../../assets/img/date.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+                <img src="../../assets/img/ldate.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+                2021-06-04</td>
+            <td><img src="../../assets/img/box1.png" class="me-2" alt=''/>USDT</td>
+            <td class="amount">+1.1000000</td>
+            <td>
+              <div class="depositbtn">
+                <button class="btn" type="button" >Deposit</button>
+              </div>
+            </td>
+            <td><img src="../../assets/img/checked.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+              <img src="../../assets/img/lchecked.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+              Completed
+            </td>
+          </tr>
+          <tr class="withdraw" [style.display]="displayW">
+            <td><img src="../../assets/img/date.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+              <img src="../../assets/img/ldate.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+              2021-06-04</td>
+            <td><img src="../../assets/img/box1.png" class="me-2" alt=''/>USDT</td>
+            <td class="amount">+1.1000000</td>
+            <td>
+              <div class="wdbtn">
+                <button class="btn" type="button" >Withdraw</button>
+              </div>
+            </td>
+            <td><img src="../../assets/img/checked.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+                <img src="../../assets/img/lchecked.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+                Completed
+            </td>
+          </tr>
+          <tr className="deposit" [style.display]="displayD">
+            <td><img src="../../assets/img/date.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+              <img src="../../assets/img/ldate.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+              2021-06-04</td>
+            <td><img src="../../assets/img/box1.png" class="me-2" alt=''/>USDT</td>
+            <td class="amount">+1.1000000</td>
+            <td>
+              <div class="depositbtn">
+                <button class="btn" type="button" >Deposit</button>
+              </div>
+            </td>
+            <td><img src="../../assets/img/checked.png" class="me-2 dark" alt='' [style.display]="dtheme.dark"/>
+              <img src="../../assets/img/lchecked.png" class="me-2 light" alt='' [style.display]="dtheme.light"/>
+              Completed
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

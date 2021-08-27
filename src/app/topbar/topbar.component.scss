@@ -1,0 +1,131 @@
+
+@mixin media-query ($size){
+  @if $size == 1399px  {
+      @media only screen and (max-width:1399px){
+          @content;
+      }
+  }
+
+}
+
+.navbar {
+	padding-right:20px;
+  color: var(--ecriture);
+  background-color:var(--sectionBackground) ;
+  padding-left:20px;
+  font-family: 'raleway', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  border-bottom: 2px solid var(--borderColor);
+
+  .ul2 {
+    padding-left: 25px;
+    border-left: 2px solid var(--borderColor);
+    @include media-query (1399px){
+        padding-left: 0px;
+        border-left: 0px;
+    }
+
+  }
+  .ul1 {
+    a:hover{
+      border-bottom: 4px solid var(--ecriture);}
+      @include media-query (1399px){
+        border-bottom: 0px ;
+      }
+  }
+
+  p {
+    color: var(--pColor);
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+}
+
+.navbar-light .navbar-brand  {
+  color:  var(--ecriture);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-family: 'raleway', sans-serif;
+  color: var(--ecriture);
+  font-size: 20px;
+  &:hover {
+      color: var(--ecriture);
+  }
+}
+
+a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  &:active{
+      background-color:transparent;
+  }
+}
+
+a{
+  &.nav-link {
+  color: var(--ecriture);
+      &:hover {
+          color: var(--ecriture);
+
+      }
+  }
+
+}
+
+.btn-check:focus+.btn, .btn:focus {
+  border: 0px;
+  box-shadow: 0 0 0px #68646400;
+}
+
+.user-img{
+  // margin-top: 5px;
+  max-width: 45px;
+  max-height: 45px;
+}
+
+.logo {
+  padding-right: 25px;
+  margin-right: 25px;
+  border-right: 2px solid var(--borderColor);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  }
+
+
+.navimg{
+  margin-top: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.liuser{
+  width: 150px;
+  cursor: pointer;
+  div{
+    color: var(--ecriture);
+    &:hover {
+      color: var(--ecriture);
+    }
+  }
+}
+
+li {
+  @include media-query (1399px){
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
+}
+
+.ul2 {
+  li {
+    @include media-query (1399px){
+      margin-bottom: 10px;
+    }
+  }
+}
+

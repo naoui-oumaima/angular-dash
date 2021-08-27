@@ -1,0 +1,90 @@
+@mixin media-query ($size){
+   @if $size == 768px {
+      @media only screen and (max-width:768px){
+          @content;
+      }
+  }
+};
+
+:root {
+  --ecriture: #fff;
+  --background: #202948;
+  --sectionBackground: #2c365e;
+  --borderColor:#585f76;
+  --ThTable:#141b32;
+  --color1:#fff;
+  --btnColor1: #463842;
+  --btnColor2: #253947;
+  --btnColor3: #2d3e4e;
+  --pColor:#a2a7b8;
+  --Color2:#fff;
+  --dark:'';
+  --light:'none';
+}
+
+*{
+  box-sizing: border-box;
+}
+
+#body {
+  background-color:var(--background);
+  width: 100%;
+  overflow-x: hidden;
+  color: var(--ecriture);
+  @include media-query (768px){
+    font-size:17px;
+  }
+}
+
+
+.btn{
+  @include media-query (768px){
+      font-size:20px;
+  }
+}
+
+.titre{
+	font-family: 'raleway', sans-serif;
+	font-weight: 700;
+	font-size:20px;
+}
+
+.block{
+	background-color: var(--sectionBackground);
+	margin: 10px;
+	padding-top: 10px;
+
+}
+
+table {
+  thead {
+    border-bottom:2px solid var(--ThTable);
+    background-color:var(--ThTable);
+    font-family: 'raleway', sans-serif;
+    font-weight: 600;
+    color:var(--ecriture);
+
+  }
+  tbody {
+    background-color:var(--sectionBackground);
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    color:var(--ecriture);
+
+    tr {
+        td{
+            border-bottom:1px solid var(--borderColor);
+            &:hover{
+                color:var(--ecriture);
+            }
+        }
+    }
+  }
+}
+
+
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
