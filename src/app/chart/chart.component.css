@@ -1,0 +1,55 @@
+.section2 {
+  margin-top: 40px;
+  padding: 0px 20px;
+  width: 100%;
+}
+
+.cblock {
+  background-color: var(--sectionBackground);
+  margin: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.weekbtn {
+  border-radius: 5%;
+  background-color: var(--btnColor1);
+  width: 100px;
+  text-align: center;
+}
+.weekbtn .btn {
+  color: #e0732b;
+}
+.weekbtn .btn:hover {
+  color: #e0732b;
+}
+
+.yearbtn {
+  border-radius: 5%;
+  background-color: var(--btnColor3);
+  width: 100px;
+  text-align: center;
+}
+.yearbtn .btn {
+  color: #619468;
+}
+.yearbtn .btn:hover {
+  color: #619468;
+}
+
+.day {
+  width: 100px;
+  text-align: center;
+}
+
+.courbe {
+  background-color: var(--background);
+  padding: 10px;
+  max-width: 95%;
+  margin: 35px auto;
+}
+
+button:focus {
+  border: 0px;
+  box-shadow: 0 0 0px #68646400;
+}/*# sourceMappingURL=chart.component.css.map */

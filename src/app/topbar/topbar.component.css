@@ -1,0 +1,111 @@
+.navbar {
+  padding-right: 20px;
+  color: var(--ecriture);
+  background-color: var(--sectionBackground);
+  padding-left: 20px;
+  font-family: "raleway", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  border-bottom: 2px solid var(--borderColor);
+}
+.navbar .ul2 {
+  padding-left: 25px;
+  border-left: 2px solid var(--borderColor);
+}
+@media only screen and (max-width: 1399px) {
+  .navbar .ul2 {
+    padding-left: 0px;
+    border-left: 0px;
+  }
+}
+.navbar .ul1 a:hover {
+  border-bottom: 4px solid var(--ecriture);
+}
+@media only screen and (max-width: 1399px) {
+  .navbar .ul1 {
+    border-bottom: 0px;
+  }
+}
+.navbar p {
+  color: var(--pColor);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.navbar-light .navbar-brand {
+  color: var(--ecriture);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-family: "raleway", sans-serif;
+  color: var(--ecriture);
+  font-size: 20px;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--ecriture);
+}
+
+a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+a:-webkit-any-link:active {
+  background-color: transparent;
+}
+
+a.nav-link {
+  color: var(--ecriture);
+}
+a.nav-link:hover {
+  color: var(--ecriture);
+}
+
+.btn-check:focus + .btn, .btn:focus {
+  border: 0px;
+  box-shadow: 0 0 0px #68646400;
+}
+
+.user-img {
+  max-width: 45px;
+  max-height: 45px;
+}
+
+.logo {
+  padding-right: 25px;
+  margin-right: 25px;
+  border-right: 2px solid var(--borderColor);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.navimg {
+  margin-top: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.liuser {
+  width: 150px;
+  cursor: pointer;
+}
+.liuser div {
+  color: var(--ecriture);
+}
+.liuser div:hover {
+  color: var(--ecriture);
+}
+
+@media only screen and (max-width: 1399px) {
+  li {
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 1399px) {
+  .ul2 li {
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=topbar.component.css.map */

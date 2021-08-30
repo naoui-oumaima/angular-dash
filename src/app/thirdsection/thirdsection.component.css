@@ -1,0 +1,67 @@
+.section3 {
+  margin-top: 40px;
+  padding: 0px 20px;
+  width: 100%;
+}
+
+#all {
+  width: 120px;
+  text-align: center;
+}
+
+.interestbtn {
+  border-radius: 5%;
+  background-color: var(--btnColor2);
+  width: 120px;
+  text-align: center;
+}
+.interestbtn .btn {
+  color: #366c43;
+}
+.interestbtn .btn:hover {
+  color: #366c43;
+}
+
+.wdbtn {
+  border-radius: 5%;
+  background-color: var(--btnColor1);
+  width: 120px;
+  text-align: center;
+}
+.wdbtn .btn {
+  color: #e0732b;
+}
+.wdbtn .btn:hover {
+  color: #e0732b;
+}
+
+.depositbtn {
+  border-radius: 5%;
+  background-color: var(--btnColor3);
+  width: 120px;
+  text-align: center;
+}
+.depositbtn .btn {
+  color: #619468;
+}
+.depositbtn .btn:hover {
+  color: #619468;
+}
+
+.amount {
+  color: var(--Color2);
+  font-size: 16px;
+}
+
+button:focus {
+  border: 0px;
+  box-shadow: 0 0 0px #68646400;
+}
+
+.dark {
+  display: var(--dark);
+}
+
+.light {
+  display: var(--light);
+}/*# sourceMappingURL=thirdsection.component.css.map */
